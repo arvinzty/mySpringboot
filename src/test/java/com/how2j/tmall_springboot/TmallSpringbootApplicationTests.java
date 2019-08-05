@@ -97,10 +97,10 @@ public class TmallSpringbootApplicationTests {
 		try {
 			subject.login(token);
 //			User u=userService.get(user.getName());
-			System.out.println("登录成功");
+			System.out.println("登录成功登录成功");
 		}catch (Exception e){
 			e.printStackTrace();
-			System.out.println("登录错误");
+			System.out.println("登录错误登录错误");
 		}
 
 	}
