@@ -11,6 +11,8 @@ import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+
+//shiro配置文件
 import com.how2java.tmall.realm.JPARealm;
 @Configuration
 public class ShiroConfiguration {

@@ -25,11 +25,11 @@ public class PropertyValueService {
     public void update(PropertyValue propertyValue){
         propertyValueDao.save(propertyValue);
     }
+//    给ropertyValue赋值，第一次的时候初始化
     public void init(Product product){
         Category category=categoryService.getOne(product.getCategory().getId());
         List<Property> properties=property.findByCategory(category);
         for (Property tem:properties){
-
             if (null==propertyValueDao.findByProductAndProperty(product,tem)){
                 PropertyValue propertyValue=new PropertyValue();
                 propertyValue.setProduct(product);

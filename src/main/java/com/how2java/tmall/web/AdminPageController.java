@@ -3,6 +3,7 @@ package com.how2java.tmall.web;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+//放置静态页面跳转
 
 @Controller
 public class AdminPageController {

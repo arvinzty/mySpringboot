@@ -4,12 +4,13 @@ import com.how2java.tmall.util.PortUtil;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @EnableCaching
 public class Application {
     static {
-        PortUtil.checkPort(6379,"redis服务端",true);
+        PortUtil.checkPort(6379,"redis服务端",false);
     }
     public static void main(String[] args){
         SpringApplication.run(Application.class,args);

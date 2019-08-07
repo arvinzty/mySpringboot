@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 
 @RestController
 @ControllerAdvice
+//当外键约束不为空时，删除会显示的错误信息
 public class GloabalExceptionHandler {
     @ExceptionHandler(value = Exception.class)
     public String defaultErrorHandler(HttpServletRequest req, Exception e) throws ClassNotFoundException {

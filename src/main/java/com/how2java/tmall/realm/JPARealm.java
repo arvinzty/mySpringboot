@@ -18,12 +18,13 @@ import javax.xml.ws.Action;
 public class JPARealm extends AuthorizingRealm {
     @Autowired
     UserService userService;
+//    业务没有权限控制
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
         SimpleAuthorizationInfo s=new SimpleAuthorizationInfo();
         return s;
     }
-
+//进行登录验证
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
         String userName=authenticationToken.getPrincipal().toString();

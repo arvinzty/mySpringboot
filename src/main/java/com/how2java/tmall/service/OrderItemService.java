@@ -19,7 +19,7 @@ public class OrderItemService {
     public List<OrderItem> list(Order order){
         return orderItemDAO.findByOrderOrderByIdDesc(order);
     }
-
+//Order里填充OrderItem数组；并计算商品总金额和数量
     public void fill(Order order){
         float total = 0;
         int totalNumber = 0;

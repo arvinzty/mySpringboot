@@ -25,13 +25,15 @@ public class CategoryService<page4Navigator> {
     CategoryDao categoryDao;
 
     //倒叙查询所有数据
+//    缓存的key查看缓存
     @Cacheable(key="'categories-all'")
     public List<Category> list(){
         Sort sort=new Sort(Sort.Direction.DESC,"id");
         return categoryDao.findAll(sort);
     }
-    @Cacheable(key="'categories-page-'+#p0+'-'+#p1")
+//    @Cacheable(key="'categories-page-'+#p0+'-'+#p1")
     public Page4Navigator<Category> list(int start,int size,int navigatePages){
+//分页查询，start查询起始位置，size单页显示数据，navigatePages
         Sort sort=new Sort(Sort.Direction.DESC,"id");
         Pageable pageable=new PageRequest(start,size,sort);
         Page pageFromJpa=categoryDao.findAll(pageable);

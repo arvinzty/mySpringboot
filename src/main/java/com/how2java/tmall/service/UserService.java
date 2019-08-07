@@ -26,6 +26,7 @@ public class UserService {
     public User get(String username){
         return userDao.findByName(username);
     }
+//   判断是否存在重名，重名返回true，不重复fale
     public Boolean isExist(String name){
         User user=userDao.findByName(name);
         if (null==user)

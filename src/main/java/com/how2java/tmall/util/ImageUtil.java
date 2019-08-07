@@ -15,6 +15,7 @@ import java.awt.image.WritableRaster;
 import java.io.File;
 import java.io.IOException;
 public class ImageUtil {
+//    图片转换工具，。将图片转换为真正的jpg，而不是后缀为jpg
     public static BufferedImage change2jpg(File f) {
         try {
             Image i = Toolkit.getDefaultToolkit().createImage(f.getAbsolutePath());
@@ -33,7 +34,7 @@ public class ImageUtil {
             return null;
         }
     }
-
+//裁剪图片尺寸
     public static void resizeImage(File srcFile, int width,int height, File destFile) {
         try {
             if(!destFile.getParentFile().exists())
